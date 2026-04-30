@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings - Flexible Configuration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #4e54c8, #8f94fb);
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .settings-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .setting-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .setting-item:last-child {
+      border-bottom: none;
+    }
+    .setting-label {
+      font-weight: 600;
+    }
+    .setting-control input[type="text"],
+    .setting-control select {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      min-width: 200px;
+    }
+    .save-btn {
+      margin-top: 30px;
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      background-color: #4e54c8;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .save-btn:hover {
+      background-color: #3b3fc0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Settings & Configuration</h1>
+    <p>Adjust your app behavior and environment with flexible settings</p>
+  </header>
+
+  <div class="settings-section">
+    <div class="setting-item">
+      <div class="setting-label">Site Title</div>
+      <div class="setting-control">
+        <input type="text" value="My App Name" />
+      </div>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">Enable Maintenance Mode</div>
+      <div class="setting-control">
+        <select>
+          <option value="off">Off</option>
+          <option value="on">On</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">Default Language</div>
+      <div class="setting-control">
+        <select>
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="fr">French</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">API Base URL</div>
+      <div class="setting-control">
+        <input type="text" value="https://api.example.com/v1" />
+      </div>
+    </div>
+
+    <button class="save-btn">Save Settings</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings - Flexible Configuration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .setting-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .toggle input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+
+    button {
+      background-color: #0066cc;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      margin: 30px auto 0;
+    }
+
+    button:hover {
+      background-color: #004b99;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Settings - Flexible Configuration</h2>
+
+    <form>
+      <div class="setting-group">
+        <label for="siteTitle">Site Title</label>
+        <input type="text" id="siteTitle" placeholder="Enter site title"/>
+      </div>
+
+      <div class="setting-group">
+        <label for="theme">Theme Selection</label>
+        <select id="theme">
+          <option value="light">Light Mode</option>
+          <option value="dark">Dark Mode</option>
+          <option value="auto">Auto (System Default)</option>
+        </select>
+      </div>
+
+      <div class="setting-group">
+        <label>Email Notifications</label>
+        <div class="toggle">
+          <input type="checkbox" id="emailNotify" />
+          <span>Enable email alerts</span>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <label>Maintenance Mode</label>
+        <div class="toggle">
+          <input type="checkbox" id="maintenanceMode" />
+          <span>Activate maintenance mode</span>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <label for="customFooter">Custom Footer Text</label>
+        <input type="text" id="customFooter" placeholder="Enter footer text"/>
+      </div>
+
+      <button type="submit">Save Settings</button>
+    </form>
+  </div>
+</body>
+</html>
+

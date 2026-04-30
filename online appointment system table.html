@@ -1,0 +1,174 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment & Bookings</title> 
+    <style>
+        .bg{
+            background-color: rgb(95, 95, 151);
+        }
+     body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+       th {
+      background-color: #f0f0f0;
+    }
+    .status-pending { color: orange; font-weight: bold; }
+    .status-confirmed { color: blue; font-weight: bold; }
+    .status-completed { color: green; font-weight: bold; }
+    .status-cancelled { color: red; font-weight: bold; }
+    .status-paid {
+      color: green;
+      font-weight: bold;
+    }
+    .status-pending {
+      color: orange;
+      font-weight: bold;
+    }
+    .status-failed {
+      color: red;
+      font-weight: bold;
+    }
+    .ac{
+        background-color: rgb(50, 50, 143) ;
+    }
+    h2{
+      text-align: center;
+      color: #f0f0f0;
+    }
+    </style>
+ </head>
+ 
+ <body class="ac">
+      <h2>7.Appointments / Bookings</h2>
+
+ 
+ <table class="bg">
+    <thead>
+      <tr>
+        <th>Appointment ID</th>
+        <th>User Name</th>
+        <th>Staff Name</th>
+        <th>Service Name</th>
+        <th>Date & Time</th>
+        <th>Status</th>
+        <th>Notes</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Aarav Patel</td>
+        <td>Neha Sharma</td>
+        <td>Hair Cut</td>
+        <td>2025-06-27 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Use mild shampoo</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sana Iqbal</td>
+        <td>Ravi Mehta</td>
+        <td>Facial Treatment</td>
+        <td>2025-06-28 04:00 PM</td>
+        <td class="status-pending">Pending</td>
+        <td>Allergic to strong fragrance</td>
+        <td>2025-06-22 10:15:00</td>
+      </tr>
+       <tr>
+        <td>3</td>
+        <td>Akash Patel</td>
+        <td>Sarojni Sharma</td>
+        <td>Nail Polish</td>
+        <td>2025-06-27 05:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Nail Polish</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>4</td>
+        <td>Nitesh jan</td>
+        <td>Shubam gaykwad</td>
+        <td>Hair Bleach</td>
+        <td>2025-06-28 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Hair Bleach</td>
+        <td>2025-06-21 08:30:00</td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>nagash </td>
+        <td>Neha Sharma</td>
+        <td>Hair Cut</td>
+        <td>2025-06-29 07:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>hair shain</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>6</td>
+        <td>Ashraf Patel</td>
+        <td>Ravi Mehta</td>
+        <td>Face pack</td>
+        <td>2025-06-30 11:30 AM</td>
+        <td class="status-pending">Pending</td>
+        <td>face mask </td>
+        <td>2025-06-20 08:00:00</td>
+      </tr>
+       <tr>
+        <td>7</td>
+        <td>arshad patal</td>
+        <td>Neha Sharma</td>
+        <td>Hair Cut</td>
+        <td>2025-06-31 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Use mild shampoo</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>8</td>
+        <td>fatima biyabani</td>
+        <td>Sarojni Sharma</td>
+        <td>Makeup artist</td>
+        <td>2025-07-01 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>face Makeu</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>9</td>
+        <td>ayma khan</td>
+         <td>Sarojni Sharma</td>
+        <td>Makeup artist</td>
+        <td>2025-06-27 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>face Makeu</td>
+        <td>2025-07-01 09:00:00</td>
+      </tr>
+       <tr>
+        <td>10</td>
+        <td>sana shaik</td>
+         <td>Sarojni Sharma</td>
+        <td>Makeup artist</td>        <td>2025-06-27 11:30 AM</td>
+        <td class="status-failed">Failed</td>
+        <td> face Makeup</td>
+        <td>2025-07-01 09:00:00</td>
+      </tr>
+    </tbody>
+  </table>
+ </body>
+ </html>

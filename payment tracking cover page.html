@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Tracking by ID</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5d9fc1, #f97979);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #007B91;
+    }
+
+    .form-group {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 70%;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007B91;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f73;
+    }
+
+    .result-table {
+      width: 100%;
+      margin-top: 30px;
+      border-collapse: collapse;
+      display: none;
+    }
+
+    .result-table th, .result-table td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .result-table th {
+      background-color: #007B91;
+      color: #fff;
+    }
+
+    .status-paid { color: green; font-weight: bold; }
+    .status-due { color: orange; font-weight: bold; }
+    .status-pending { color: red; font-weight: bold; }
+    .status-failed { color: rgb(195, 34, 147); font-weight: bold; }
+
+    .no-result {
+      text-align: center;
+      color: red;
+      margin-top: 20px;
+      display: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Payment Tracking </h2>
+
+    <div class="form-group">
+      <input type="text" id="searchId" placeholder="Enter Payment ID or Client ID" />
+      <button onclick="trackPayment()">Track</button>
+    </div>
+
+    <div class="no-result" id="noResult">No payment record found for the entered ID.</div>
+
+    <table class="result-table" id="resultTable">
+      <thead>
+        <tr>
+          <th>Payment ID</th>
+          <th>Appointment ID</th>
+          <th>Date</th>
+          <th>Amount (₹)</th>
+          <th>Status</th>
+          <th>Payment Method </th>
+        </tr>
+      </thead>
+      <tbody id="resultBody">
+        <!-- Results will be populated here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Sample demo data
+    const paymentRecords = [
+      { paymentId: "1", appointmentId: "101", date: "2025-06-15", amount: 1500, status: "Paid",PaymentMethod:"Card" },
+      { paymentId: "2", appointmentId: "102", date: "--", amount: 899, status: "pending",PaymentMethod:"UPI" },
+      { paymentId: "3", appointmentId: "103", date: "2025-06-24", amount: 1200, status: "Failed",PaymentMethod:"Cash" },
+      { paymentId: "4", appointmentId: "104", date: "2025-06-24", amount: 1500, status: "Paid",PaymentMethod:"Card" },
+      { paymentId: "5", appointmentId: "105", date: "2025-06-42", amount: 599, status: "Paid",PaymentMethod:"Cash" },
+      { paymentId: "6", appointmentId: "103", date: "2025-06-25", amount: 1200, status: "Failed",PaymentMethod:"Cash" },
+      { paymentId: "7", appointmentId: "102", date: "2025-06-25", amount: 999, status: "Paid",PaymentMethod:"UPI" },
+      { paymentId: "8", appointmentId: "101", date: "2025-06-25", amount: 1899, status: "Failed",PaymentMethod:"UPI" },
+      { paymentId: "9", appointmentId: "105", date: "--", amount: 1999, status: "pending",PaymentMethod:"Card" },
+      { paymentId: "10",appointmentId: "104", date: "2025-06-25", amount: 2000, status: "Paid",PaymentMethod:"Card" },
+
+    ];
+
+    function trackPayment() {
+      const searchId = document.getElementById("searchId").value.trim().toUpperCase();
+      const resultTable = document.getElementById("resultTable");
+      const resultBody = document.getElementById("resultBody");
+      const noResult = document.getElementById("noResult");
+
+      // Clear old results
+      resultBody.innerHTML = '';
+      resultTable.style.display = 'none';
+      noResult.style.display = 'none';
+
+      const matches = paymentRecords.filter(record =>
+        record.paymentId === searchId || record.appointmentId=== searchId
+      );
+
+      if (matches.length === 0) {
+        noResult.style.display = 'block';
+      } else {
+        matches.forEach(record => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${record.paymentId}</td>
+            <td>${record.appointmentId}</td>
+            <td>${record.date}</td>
+            <td>₹${record.amount}</td>
+            <td class="status-${record.status.toLowerCase()}">${record.status}</td>
+             <td>${record.PaymentMethod}</td>
+          `;
+          resultBody.appendChild(row);
+        });
+        resultTable.style.display = 'table';
+      }
+    }
+  </script>
+</body>
+</html>

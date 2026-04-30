@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Promo Codes & Offers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .promo-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+    .promo-card {
+      background: rgb(223, 166, 166);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .promo-card:hover {
+      transform: translateY(-5px);
+    }
+    .promo-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #411515;
+    }
+    .promo-code {
+      font-size: 1.2rem;
+      background: #f1f1f1;
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 15px 0;
+      letter-spacing: 1px;
+    }
+    .promo-desc {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .btn {
+      background: #ff5f6d;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #e04857;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Promo Codes & Exclusive Offers</h1>
+    <p>Save more with our latest deals. Use the codes below at checkout!</p>
+  </header>
+
+  <section class="promo-section">
+    <div class="promo-card">
+      <div class="promo-title"><b>Summer Deal </b></div>
+      <div class="promo-code">SUMMER20</div>
+      <p class="promo-desc">Get 20% off on all selected services. </p>
+      <a href="#" class="btn">Apply Now</a>
+    </div>
+    <div class="promo-card">
+      <div class="promo-title"><b>First Time Offer</b></div>
+      <div class="promo-code">WELCOME10</div>
+      <p class="promo-desc">Get 10% off on your first booking . No minimum order value.</p>
+      <a href="#" class="btn">Redeem Offer</a>
+    </div>
+  </section>
+
+</body>
+</html>
