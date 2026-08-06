@@ -1,0 +1,32 @@
+{
+  "name": "beauty-parlor-management",
+  "version": "1.0.0",
+  "description": "Beauty Parlor Management System - REST API with full test suite",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "mocha 'tests/unit/**/*.test.js' 'tests/api/**/*.test.js' --timeout 10000 --exit",
+    "test:unit": "mocha 'tests/unit/**/*.test.js' --timeout 5000 --exit",
+    "test:api": "mocha 'tests/api/**/*.test.js' --timeout 10000 --exit",
+    "test:e2e": "playwright test",
+    "test:all": "npm test && npm run test:e2e",
+    "db:setup": "node src/db/setup.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2",
+    "sinon": "^17.0.1",
+    "supertest": "^6.3.3"
+  }
+}
