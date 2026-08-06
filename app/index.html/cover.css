@@ -1,0 +1,19 @@
+.nev-bar{
+    background-color: aqua;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo{
+    padding-right: 50px;
+    height: 120px;
+    align-items: right;
+}
+.manu-items{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+
+}

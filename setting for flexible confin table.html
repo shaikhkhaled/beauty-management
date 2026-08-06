@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting for flexible confin</title>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+     th {
+      background-color: #f0f0f0;
+    }
+    .ip {
+      font-family: monospace;
+      color: #2f0dc5;
+    }
+     .key {
+      font-weight: bold;
+      background-color: rgba(201, 220, 162, 0.571);
+      width: 20%;
+    }
+
+    .value {
+      color: #3e291e;
+    }
+    h2{ 
+        text-align: center;
+    } .ac{
+        background-color: rgb(50, 50, 143) ;
+    }
+    h2{
+      text-align: center;
+      color: #f0f0f0;
+    }
+    .bg{
+            background-color: rgb(95, 95, 151);
+        }
+
+    </style>
+</head>
+<body class="ac">
+    <h2>12.Logs (Admin Action & Activity) </h2>
+
+    
+  <table class="bg">
+    <thead>
+      <tr>
+        <th>Log ID</th>
+        <th>Admin Name</th>
+        <th>Action</th>
+        <th>IP Address</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Neha (admin_super)</td>
+        <td class="action">Created a new service: "Hair Spa"</td>
+        <td class="ip">192.168.1.101</td>
+        <td>2025-06-25 14:12:35</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ravi (manager_kavita)</td>
+        <td class="action">Deleted user account ID #12</td>
+        <td class="ip">192.168.1.104</td>
+        <td>2025-06-26 09:45:10</td>
+      </tr>
+    </tbody>
+  </table> 
+  
+  <h2>13.Application Settings</h2>
+
+  <table class="bg">
+    <thead>
+      <tr>
+        <th class="key">Setting Key</th>
+        <th class="value">Setting Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="key">site_name</td>
+        <td class="value">“Serene Spa & Wellness”</td>
+      </tr>
+      <tr>
+        <td class="key">timezone</td>
+        <td class="value">Asia/Kolkata</td>
+      </tr>
+      <tr>
+        <td class="key">currency_symbol</td>
+        <td class="value">₹</td>
+      </tr>
+      <tr>
+        <td class="key">items_per_page</td>
+        <td class="value">10</td>
+      </tr>
+      <tr>
+        <td class="key">maintenance_mode</td>
+        <td class="value">false</td>
+      </tr>
+    </tbody>
+  </table>
+
+    
+</body>
+</html>

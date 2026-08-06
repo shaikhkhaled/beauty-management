@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style> body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    code{
+        background-color: #eee;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        display: inline-block;
+    }
+    img {
+      max-width: 50px;
+      height: auto;
+      border-radius: 5px;
+    }
+    br{
+        background-color: black;
+    }
+      th {
+      background-color: #f0f0f0;
+    }
+    .status-pending { color: orange; font-weight: bold; }
+    .status-confirmed { color: blue; font-weight: bold; }
+    .status-completed { color: green; font-weight: bold; }
+    .status-cancelled { color: red; font-weight: bold; }
+    .status-paid {
+      color: green;
+      font-weight: bold;
+    }
+    .status-pending {
+      color: orange;
+      font-weight: bold;
+    }
+    .status-failed {
+      color: red;
+      font-weight: bold;
+    }
+     .stars {
+      color: gold;
+      font-size: 1.1em;
+    }
+    .active {
+      color: green;
+      font-weight: bold;
+    }
+
+    .inactive {
+      color: red;
+      font-weight: bold;
+    }
+     .ip {
+      font-family: monospace;
+      color: #2f0dc5;
+    }
+     .key {
+      font-weight: bold;
+      background-color: rgba(201, 220, 162, 0.571);
+      width: 20%;
+    }
+
+    .value {
+      color: #3e291e;
+    }
+    h2{ 
+        text-align: center;
+    }
+    .Price{
+      color: darkgoldenrod;
+    }
+  </style>
+</head>
+<body>
+<h2>1.Database Information</h2>
+<table>
+    <tr>
+        <th>Database Name</th>
+        <th>Status</th>
+    </tr>
+    <tr>
+        <td>BeautyParlorDB</td>
+        <td>Created & In Use</td>
+    </tr>
+</table>
+ 
+<hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+  <h2>2.Users Table</h2>
+
+  <table >
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Password Hash</th>
+        <th>Profile Image</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Humaira Khan</td>
+        <td>khanihu@example.com</td>
+        <td>+91-9000000000</td>
+        <td>$2y$10$Qv9J...h4T</td>
+        <td><img src="/logo1.png" alt="Aarav"></td>
+        <td>2025-06-01 09:00:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sana Iqbal</td>
+        <td>sana@example.com</td>
+        <td>+91-9888888888</td>
+        <td>$2y$10$9tEf...7Fj</td>
+        <td><img src="/col-1-01.jpeg" alt="Sana"></td>
+        <td>2025-06-20 16:30:00</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Tahreem Tanveer </td>
+        <td>Tahreem12@example.com</td>
+        <td>+91-8765432112</td>
+        <td>tah123$#@df</td>
+        <td><img src="/col-1-01.jpeg" alt="Tahreem"></td>
+        <td>2025-05-20 17:30:00</td>
+      </tr>
+
+       <tr>
+        <td>4</td>
+        <td>Almeera Anam</td>
+        <td>almeer34@example.com</td>
+        <td>+91-9124536787</td>
+        <td>sjhgsdd56</td>
+        <td><img src="/logo1.png" alt="Almeera"></td>
+        <td>2024-06-01 09:12:00</td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>Ashmeera Anam</td>
+        <td>ahsu123@example.com</td>
+        <td>+91-8983461432</td>
+        <td>$fghj678</td>
+        <td><img src="/logo1.png" alt="Ashmeera"></td>
+        <td>2023-06-01 09:08:10</td>
+      </tr>
+      <td>6</td>
+        <td>Rohin Jadhw</td>
+        <td>jadhw8983@example.com</td>
+        <td>+91-8446224613</td>
+        <td>#@dfghj67</td>
+        <td><img src="/logo1.png" alt="Rohin"></td>
+        <td>2025-06-01 09:07:10</td>
+      </tr>
+      <td>7</td>
+        <td>payal kumari</td>
+        <td>kumari456@example.com</td>
+        <td>+91-6789123456</td>
+        <td>#@fghj45678</td>
+        <td><img src="/logo1.png" alt="payal"></td>
+        <td>2025-07-01 09:06:10</td>
+      </tr>
+      <td>8</td>
+        <td>Vandanan kolkarni</td>
+        <td>kolkarni987@example.com</td>
+        <td>+91-844567433</td>
+        <td>abcd9876</td>
+        <td><img src="/logo1.png" alt="Vandanan"></td>
+        <td>2025-01-01 09:05:10</td>
+      </tr>
+      <td>9</td>
+        <td>Pari nagwanish</td>
+        <td>pari8983@example.com</td>
+        <td>+91-4567892463</td>
+        <td>#@dfghj67</td>
+        <td><img src="/logo1.png" alt="Pari"></td>
+        <td>2022-06-01 09:07:10</td>
+      </tr>
+      <td>10</td>
+        <td>Ruqaya fatima </td>
+        <td>fatima8983@example.com</td>
+        <td>+91-6789964369</td>
+        <td>#@dfghj67</td>
+        <td><img src="/logo1.png" alt="Ruqaya"></td>
+        <td>2025-06-03 09:07:10</td>
+      </tr>
+    </tbody>
+  </table>   
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+
+  
+  <h2>3.Admin Users</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Admin ID</th>
+        <th>Username</th>
+        <th>Password Hash</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10001</td>
+        <td>Ali Khan</td>
+        <td><code>$2y$10$7f8U...8Hs</code></td>
+        <td>ali@gmail.com</td>
+        <td>superadmin</td>
+        <td>2025-06-01 09:00:00</td>
+      </tr>
+      <tr>
+        <td>10002</td>
+        <td>Ritika Sing</td>
+        <td><code>$2y$10$BtY4...gWp</code></td>
+        <td>ritu@gmail.com</td>
+        <td>manager</td>
+        <td>2025-06-15 11:45:00</td>
+      </tr>
+      <td>10003</td>
+        <td>Imran Shaikh</td>
+        <td><code>$2y$10$BtY4...9HS</code></td>
+        <td>Shaikhi007@gmail.com</td>
+        <td>OPS & Q</td>
+        <td>2025-06-16 12:45:00</td>
+      </tr>
+      <td>10004</td>
+        <td>Sana patal</td>
+        <td><code>$1y$12$BtY6...gWp</code></td>
+        <td>sanaipatal@gmail.com</td>
+        <td>Fainace</td>
+        <td>2025-01-15 10:45:00</td>
+      </tr>
+      <td>10005</td>
+        <td>Savita Sharma</td>
+        <td><code>$2y$10$BtY4...gWp</code></td>
+        <td>Sharma@gmail.com</td>
+        <td>HR</td>
+        <td>2025-01-15 09:45:00</td>
+      </tr>
+    </tbody>
+  </table>
+<hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+  <h2> 4.Services</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Service ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Duration (minutes)</th>
+        <th>Price (₹)</th>
+        <th>Category</th>
+        <th>Image</th>
+        <th>Active</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Full Body Massage</td>
+        <td>Relaxing massage for stress relief and circulation improvement.</td>
+        <td>60</td>
+        <td class="Price">1500.00</td>
+        <td>Wellness</td>
+        <td><img src="https://via.placeholder.com/60" alt="Massage"></td>
+        <td>Yes</td>
+        <td>2025-06-01 10:00:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Hair Spa</td>
+        <td>Deep conditioning treatment for soft and shiny hair.</td>
+        <td>45</td>
+        <td class="Price">899.00</td>
+        <td>Hair Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="Hair Spa"></td>
+        <td>Yes</td>
+        <td>2025-06-10 15:30:00</td>
+      </tr>
+       <td>3</td>
+        <td>Hair Bleach</td>
+        <td>Deep hair bleaching treatment for soft and shiny hair.</td>
+        <td>55</td>
+        <td class="Price">999.00</td>
+        <td>Hair Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="Hair Bleach"></td>
+        <td>Yes</td>
+        <td>2025-06-10 16:30:00</td>
+      </tr>
+       <td>4</td>
+        <td>Nail Polish</td>
+        <td>Nail treatment for  shiny nail.</td>
+        <td>30</td>
+        <td class="Price">599.00</td>
+        <td>Nail Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="Nail Polish"></td>
+        <td>Yes</td>
+        <td>2025-06-10 17:30:00</td>
+      </tr>
+      <tr>
+        <td>5</td>
+          <td>Nail Buffer</td>
+          <td>Nail treatment for  shiny & Buffer nail.</td>
+          <td>30</td>
+          <td class="Price">599.00</td>
+          <td>Nail Care</td>
+          <td><img src="https://via.placeholder.com/60" alt="Buffer Nail"></td>
+          <td>Yes</td>
+          <td>2025-06-10 18:30:00</td>
+      </tr>
+      <tr>
+          <td>6</td>
+        <td>UV/LED nail</td>
+        <td>Nail treatment for  shiny nail.</td>
+        <td>30</td>
+        <td class="Price">599.00</td>
+        <td>Nail Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="LED/Nail"></td>
+        <td>Yes</td>
+        <td>2025-06-10 19:30:00</td>
+      </tr>
+      <tr>
+          <td>7</td>
+        <td>Face Pack</td>
+        <td>Deep face treatment for  shiny & soft face skin.</td>
+        <td>120</td>
+        <td class="Price">1599.00</td>
+        <td>Face Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="face pack"></td>
+        <td>Yes</td>
+        <td>2025-06-10 20:30:00</td>
+      </tr>
+      <tr>
+          <td>8</td>
+        <td>Face Mask</td>
+        <td>Deep face treatment & Mask for  shiny & soft face skin.</td>
+        <td>120</td>
+        <td class="Price">1099.00</td>
+        <td>Face Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="face Mask"></td>
+        <td>Yes</td>
+        <td>2025-06-10 21:30:00</td>
+      </tr>
+       <tr>
+        <td>9</td>
+        <td>Full Body WAX</td>
+        <td>Relaxing massage and WAX for stress relief and circulation improvement.</td>
+        <td>120</td>
+        <td class="Price">2500.00</td>
+        <td>Wellness</td>
+        <td><img src="https://via.placeholder.com/60" alt="Massage"></td>
+        <td>Yes</td>
+        <td>2025-06-01 22:00:00</td>
+      </tr>
+      <tr>
+          <td>10</td>
+        <td>Lipstick / lip glors</td>
+        <td>lip treatment for  shiny & soft lips.</td>
+        <td>120</td>
+        <td class="Price">1599.00</td>
+        <td>Face Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="lip glors"></td>
+        <td>Yes</td>
+        <td>2025-06-10 23:30:00</td>
+      </tr>
+      <tr>
+          <td>11</td>
+        <td>Face </td>
+        <td>Remove Makeup.</td>
+        <td>120</td>
+        <td class="Price">599.00</td>
+        <td>Face Care</td>
+        <td><img src="https://via.placeholder.com/60" alt="Remove makeup"></td>
+        <td>Yes</td>
+        <td>2025-06-10 24:00:00</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+  <h2> 5.Staff Members table </h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Staff ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Specialization</th>
+        <th>Profile Image</th>
+        <th>Status</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Neha Sharma</td>
+        <td>neha@example.com</td>
+        <td>+91-9876543210</td>
+        <td>Massage Therapist</td>
+        <td><img src="https://via.placeholder.com/50" alt="Neha Sharma"></td>
+        <td class="active">Active</td>
+        <td>2025-06-01 09:30:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ravi Mehta</td>
+        <td>ravi@example.com</td>
+        <td>+91-9988776655</td>
+        <td>Hair Stylist</td>
+        <td><img src="https://via.placeholder.com/50" alt="Ravi Mehta"></td>
+        <td class="inactive">Inactive</td>
+        <td>2025-06-12 14:00:00</td>
+      </tr>
+      <tr>
+      <td>3</td>
+        <td>Sarojni Sharma</td>
+        <td>sarojni@example.com</td>
+        <td>+91-9876351030</td>
+        <td>Makeup artist</td>
+        <td><img src="https://via.placeholder.com/50" alt="Sarojni Sharma"></td>
+        <td class="active">Active</td>
+        <td>2025-01-12 13:00:00</td>
+      </tr>
+       <tr>
+        <td>4</td>
+        <td>Shubam gaykwad</td>
+        <td>Shubam@example.com</td>
+        <td>+91-9923456713</td>
+        <td>Hair Stylist</td>
+        <td><img src="https://via.placeholder.com/50" alt="Shubam"></td>
+        <td class="active">Active</td>
+        <td>2025-03-11 10:30:00</td>
+      </tr>
+    </tbody>
+  </table> 
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+
+  <h2>6.Staff-Service Mapping</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Staff ID</th>
+        <th>Staff Name</th>
+        <th>Service ID</th>
+        <th>Service Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Neha Sharma</td>
+        <td>101</td>
+        <td>Full Body Massage</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Neha Sharma</td>
+        <td>102</td>
+        <td>Facial Treatment</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Ravi Mehta</td>
+        <td>103</td>
+        <td>Hair Spa</td>
+      </tr>
+       <tr>
+        <td>4</td>
+        <td>Sarojni Sharma</td>
+        <td>104</td>
+        <td>Makeup artist</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Shubam gaykwad</td>
+        <td>105</td>
+        <td>Hair spa </td>
+      </tr>
+    </tbody>
+  </table>
+<hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+ <h2>7.Appointments / Bookings</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Appointment ID</th>
+        <th>User Name</th>
+        <th>Staff Name</th>
+        <th>Service Name</th>
+        <th>Date & Time</th>
+        <th>Status</th>
+        <th>Notes</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Aarav Patel</td>
+        <td>Neha Sharma</td>
+        <td>Hair Cut</td>
+        <td>2025-06-27 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Use mild shampoo</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sana Iqbal</td>
+        <td>Ravi Mehta</td>
+        <td>Facial Treatment</td>
+        <td>2025-06-28 04:00 PM</td>
+        <td class="status-pending">Pending</td>
+        <td>Allergic to strong fragrance</td>
+        <td>2025-06-22 10:15:00</td>
+      </tr>
+       <tr>
+        <td>3</td>
+        <td>Akash Patel</td>
+        <td>Sarojni Sharma</td>
+        <td>Nail Polish</td>
+        <td>2025-06-27 05:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Nail Polish</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>4</td>
+        <td>Nitesh jan</td>
+        <td>Shubam gaykwad</td>
+        <td>Hair Bleach</td>
+        <td>2025-06-28 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Hair Bleach</td>
+        <td>2025-06-21 08:30:00</td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>nagash </td>
+        <td>Neha Sharma</td>
+        <td>Hair Cut</td>
+        <td>2025-06-29 07:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>hair shain</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>6</td>
+        <td>Ashraf Patel</td>
+        <td>Ravi Mehta</td>
+        <td>Face pack</td>
+        <td>2025-06-30 11:30 AM</td>
+        <td class="status-pending">Pending</td>
+        <td>face mask </td>
+        <td>2025-06-20 08:00:00</td>
+      </tr>
+       <tr>
+        <td>7</td>
+        <td>arshad patal</td>
+        <td>Neha Sharma</td>
+        <td>Hair Cut</td>
+        <td>2025-06-31 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>Use mild shampoo</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>8</td>
+        <td>fatima biyabani</td>
+        <td>Sarojni Sharma</td>
+        <td>Makeup artist</td>
+        <td>2025-07-01 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>face Makeu</td>
+        <td>2025-06-20 09:00:00</td>
+      </tr>
+       <tr>
+        <td>9</td>
+        <td>ayma khan</td>
+         <td>Sarojni Sharma</td>
+        <td>Makeup artist</td>
+        <td>2025-06-27 11:30 AM</td>
+        <td class="status-confirmed">Confirmed</td>
+        <td>face Makeu</td>
+        <td>2025-07-01 09:00:00</td>
+      </tr>
+       <tr>
+        <td>10</td>
+        <td>sana shaik</td>
+         <td>Sarojni Sharma</td>
+        <td>Makeup artist</td>        <td>2025-06-27 11:30 AM</td>
+        <td class="status-failed">Failed</td>
+        <td> face Makeup</td>
+        <td>2025-07-01 09:00:00</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+        <h2>8.Payment Records</h2>
+<table >
+    <thead>
+      <tr>
+        <th>Payment ID</th>
+        <th>Appointment ID</th>
+        <th>Amount (₹)</th>
+        <th>Payment Method</th>
+        <th>Status</th>
+        <th>Paid At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>101</td>
+        <td>1500.00</td>
+        <td>Card</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-25 12:45:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>102</td>
+        <td>899.00</td>
+        <td>UPI</td>
+        <td class="status-pending">Pending</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>103</td>
+        <td>1200.00</td>
+        <td>Cash</td>
+        <td class="status-failed">Failed</td>
+        <td>2025-06-24 15:20:00</td>
+      </tr>
+      <tr>
+      <td>4</td>
+        <td>104</td>
+        <td>1500.00</td>
+        <td>Card</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-24 15:20:00</td>
+      </tr>
+      <tr>
+      <td>5</td>
+        <td>105</td>
+        <td>599.00</td>
+        <td>Cash</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-24 15:20:00</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>103</td>
+        <td>1200.00</td>
+        <td>Cash</td>
+        <td class="status-failed">Failed</td>
+        <td>2025-06-25 16:20:00</td>
+        </tr>
+          <tr>
+        <td>7</td>
+        <td>102</td>
+        <td>999.00</td>
+        <td>UPI</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-25 17:25:00</td>
+      </tr>
+        <tr>
+        <td>8</td>
+        <td>101</td>
+        <td>1899.00</td>
+        <td>UPI</td>
+        <td class="status-failed">Failed</td>
+         <td>2025-06-25 18:28:00</td>
+      </tr>
+        <tr>
+        <td>9</td>
+        <td>105</td>
+        <td>1999.00</td>
+        <td>card</td>
+        <td class="status-pending">Pending</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>104</td>
+        <td>2000.00</td>
+        <td>card</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-25 20:28:00</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+
+  <h2>9.Service Reviews</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Review ID</th>
+        <th>User Name</th>
+        <th>Service Name</th>
+        <th>Rating</th>
+        <th>Review Text</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Aarav Mehta</td>
+        <td>Hair Cut</td>
+        <td><span class="stars">★★★★☆</span></td>
+        <td>Great service, very professional and clean environment.</td>
+        <td>2025-06-25 17:20:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sana Iqbal</td>
+        <td>Facial Treatment</td>
+        <td><span class="stars">★★★★★</span></td>
+        <td>Loved the results! Skin felt amazing. Highly recommended.</td>
+        <td>2025-06-26 11:10:00</td>
+      </tr>
+       <tr>
+        <td>3</td>
+        <td>Rohin Jadhw</td>
+        <td>Massage</td>
+        <td><span class="stars">★★★☆☆</span></td>
+        <td>Great service, very professional and clean environment.</td>
+        <td>2025-06-27 18:20:00</td>
+      </tr>
+       <tr>
+        <td>4</td>
+        <td>Ruqaya</td>
+        <td>Makeup</td>
+        <td><span class="stars">★★☆☆☆</span></td>
+        <td>Great service.</td>
+        <td>2025-06-28 17:20:00</td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>Tahreem</td>
+        <td>Face Pack</td>
+        <td><span class="stars">★☆☆☆☆</span></td>
+        <td>very professional and clean environment.</td>
+        <td>2025-06-29 17:30:00</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+
+   <h2>10.Gallery (Portfolio)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Image ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Uploaded By</th>
+        <th>Uploaded At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Bridal Makeup</td>
+        <td class="description">Elegant bridal makeup portfolio from recent wedding event.</td>
+        <td><img src="./make up.jpg" alt="Bridal Makeup"></td>
+        <td>Admin - Neha</td>
+        <td>2025-06-20 15:30:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Hair Styling</td>
+        <td class="description">Trendy hair styling done for a fashion shoot.</td>
+        <td><img src="./hair.jpg" alt="Hair Styling"></td>
+        <td>Admin - Ravi</td>
+        <td>2025-06-22 10:45:00</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr><marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+   <h2>11.Promotions & Coupons</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Coupon ID</th>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Discount (%)</th>
+        <th>Valid From</th>
+        <th>Valid Until</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><span class="code">WELCOME10</span></td>
+        <td>10% off on your first booking</td>
+        <td>10.00</td>
+        <td>2025-06-01</td>
+        <td>2025-07-01</td>
+        <td class="active">Active</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><span class="code">SUMMER20</span></td>
+        <td>20% discount on selected services</td>
+        <td>20.00</td>
+        <td>2025-05-15</td>
+        <td>2025-06-15</td>
+        <td class="inactive">Expired</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+      
+    <h2>12.Logs (Admin Action & Activity) </h2>
+
+    
+  <table>
+    <thead>
+      <tr>
+        <th>Log ID</th>
+        <th>Admin Name</th>
+        <th>Action</th>
+        <th>IP Address</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Neha (admin_super)</td>
+        <td class="action">Created a new service: "Hair Spa"</td>
+        <td class="ip">192.168.1.101</td>
+        <td>2025-06-25 14:12:35</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Ravi (manager_kavita)</td>
+        <td class="action">Deleted user account ID #12</td>
+        <td class="ip">192.168.1.104</td>
+        <td>2025-06-26 09:45:10</td>
+      </tr>
+    </tbody>
+  </table> 
+  <hr>marquee>--------------///////////////------------------/////////////---------------////////////////--------------//////////////--------------//////////////////--------------////////////////--------------</marquee><hr>
+  <h2>13.Application Settings</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="key">Setting Key</th>
+        <th class="value">Setting Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="key">site_name</td>
+        <td class="value">“Serene Spa & Wellness”</td>
+      </tr>
+      <tr>
+        <td class="key">timezone</td>
+        <td class="value">Asia/Kolkata</td>
+      </tr>
+      <tr>
+        <td class="key">currency_symbol</td>
+        <td class="value">₹</td>
+      </tr>
+      <tr>
+        <td class="key">items_per_page</td>
+        <td class="value">10</td>
+      </tr>
+      <tr>
+        <td class="key">maintenance_mode</td>
+        <td class="value">false</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+    
+</body>
+</html>

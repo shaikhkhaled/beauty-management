@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Registration & Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-purple-500 to-indigo-600 h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-2xl rounded-xl overflow-hidden w-full max-w-4xl grid grid-cols-1 md:grid-cols-2">
+  
+    <div class="p-10">
+      <h2 class="text-2xl font-bold mb-6 text-gray-700"> Registration</h2>
+      <form class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-600">User ID</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="User ID" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-600">Full Name</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Full Name" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-600">Phone Number</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Phone Number" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-600">Email</label>
+          <input type="email" class="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="FullName@example.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-600">Password</label>
+          <input type="password" class="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="••••••••" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-600">Profile Imge</label>
+          <input type="file" class="w-full mt-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="••••••••" />
+        </div>
+      
+        <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 rounded-md transition">Register</button>
+      </form>
+    </div>
+
+    <!-- Profile Display -->
+    <div class="bg-indigo-100 p-10 flex flex-col justify-center items-center relative">
+      <div class="text-center">
+        <img src="./img/img log.jpg" class="w-24 h-24 rounded-full mb-4 border-4 border-indigo-300" />
+        <h3 class="text-xl font-bold text-gray-700">Beauty Parlour</h3>
+        <p class="text-gray-500">Beauty parlour@ gmail.com</p>
+        <p class="text-sm text-gray-400 mt-2">Member since 2025</p>
+      </div>
+
+      <!-- Toggle Profile visibility -->
+      <div class="absolute top-4 right-4">
+        <label class="inline-flex items-center">
+          <input type="checkbox" id="toggleProfile" class="form-checkbox text-indigo-600" checked />
+          <span class="ml-2 text-sm text-gray-600">Show Profile</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggleProfile');
+    const profileSection = toggle.closest('.grid').children[1];
+    toggle.addEventListener('change', () => {
+      profileSection.style.display = toggle.checked ? 'flex' : 'none';
+    });
+  </script>
+</body>
+</html>

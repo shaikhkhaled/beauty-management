@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Role Management</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5729ad, #896ec9);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #d7b4b4;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #0e7490;
+      margin-bottom: 30px;
+    }
+
+    .role-summary {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+
+    .role-box {
+      background-color: #f1fcff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: 30%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .role-box strong {
+      display: block;
+      font-size: 24px;
+      color: #007b91;
+      margin-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0e7490;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .role-superadmin {
+      color: #d6336c;
+      font-weight: bold;
+    }
+
+    .role-manager {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    .role-editor {
+      color: #198754;
+      font-weight: bold;
+    }
+
+    .edit-button {
+      background: #007b91;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .edit-button:hover {
+      background: #005f73;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Role Management</h1>
+
+    <div class="role-summary">
+      <div class="role-box">
+        <strong>1</strong>
+        Super Admins
+      </div>
+      <div class="role-box">
+        <strong>1</strong>
+        Managers
+      </div>
+      <div class="role-box">
+        <strong>8</strong>
+        Admins
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Admin ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10001</td>
+          <td>Ali Khan</td>
+          <td>ali@gmail.com</td>
+          <td class="role-superadmin">Super Admin</td>
+          <td><button class="edit-button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>10002</td>
+          <td>Ritika Singh</td>
+          <td>ritu@gmail.com</td>
+          <td class="role-manager">Manager</td>
+          <td><button class="edit-button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>10003</td>
+          <td>Imran Shaikh</td>
+          <td>shaikhi007@gmail.com</td>
+          <td class="role-editor">Ops & Q</td>
+          <td><button class="edit-button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>10004</td>
+          <td>Sana Patel</td>
+          <td>sanaipatal@gmail.com</td>
+          <td class="role-editor">Fainace</td>
+          <td><button class="edit-button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>10005</td>
+          <td>Savita Sharma</td>
+          <td>Sharma@gmail.com</td>
+          <td class="role-editor">HR</td>
+          <td><button class="edit-button">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment tracking </title>
+    <style>
+           body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    
+     .ac{
+        background-color: rgb(50, 50, 143) ;
+    }
+    h2{
+      text-align: center;
+      color: #f0f0f0;
+    }
+    .bg{
+            background-color: rgb(95, 95, 151);
+        }
+        .status-paid {
+      color: rgb(122, 202, 236);
+      font-weight: bold;
+    }
+    .status-pending {
+      color: orange;
+      font-weight: bold;
+    }
+    .status-failed {
+      color: red;
+      font-weight: bold;
+    }
+
+    </style>
+</head>
+<body class="ac">
+  <h2>8.Payment Records</h2>
+<table  class="bg">
+    <thead>
+      <tr>
+        <th>Payment ID</th>
+        <th>Appointment ID</th>
+        <th>Amount (₹)</th>
+        <th>Payment Method</th>
+        <th>Status</th>
+        <th>Paid At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>101</td>
+        <td>1500.00</td>
+        <td>Card</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-25 12:45:00</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>102</td>
+        <td>899.00</td>
+        <td>UPI</td>
+        <td class="status-pending">Pending</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>103</td>
+        <td>1200.00</td>
+        <td>Cash</td>
+        <td class="status-failed">Failed</td>
+        <td>2025-06-24 15:20:00</td>
+      </tr>
+      <tr>
+      <td>4</td>
+        <td>104</td>
+        <td>1500.00</td>
+        <td>Card</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-24 15:20:00</td>
+      </tr>
+      <tr>
+      <td>5</td>
+        <td>105</td>
+        <td>599.00</td>
+        <td>Cash</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-24 15:20:00</td>
+      </tr>
+      <tr>
+       <td>6</td>
+        <td>103</td>
+        <td>1200.00</td>
+        <td>Cash</td>
+        <td class="status-failed">Failed</td>
+        <td>2025-06-25 16:20:00</td>
+        </tr>
+          <tr>
+        <td>7</td>
+        <td>102</td>
+        <td>999.00</td>
+        <td>UPI</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-25 17:25:00</td>
+      </tr>
+        <tr>
+        <td>8</td>
+        <td>101</td>
+        <td>1899.00</td>
+        <td>UPI</td>
+        <td class="status-failed">Failed</td>
+         <td>2025-06-25 18:28:00</td>
+      </tr>
+        <tr>
+        <td>9</td>
+        <td>105</td>
+        <td>1999.00</td>
+        <td>card</td>
+        <td class="status-pending">Pending</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>104</td>
+        <td>2000.00</td>
+        <td>card</td>
+        <td class="status-paid">Paid</td>
+        <td>2025-06-25 20:28:00</td>
+      </tr>
+    </tbody>
+
+    
+</body>
+</html>
